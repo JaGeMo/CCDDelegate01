@@ -4,14 +4,14 @@ using System.Collections.Generic;
 namespace Delegates01
 {
     
-    public struct Book
+    public class Book
     {
         public int ID;
         public string Name;
         public bool Paperback;
         public string Comment;
 
-        public Book(int in_counter, string in_name, bool in_paperback, string in_comment = "")
+        public Book(int in_counter, string in_name, bool in_paperback, string in_comment)
         {
             ID = in_counter;
             Name = in_name;
@@ -29,7 +29,7 @@ namespace Delegates01
         public void AddBook(Book in_Book)
         {
             Books.Add(in_Book);
-        }
+        } 
     
         public void doSomeThingWithBookDB(ProcessBooksFromStore delProc)
         {
@@ -40,19 +40,18 @@ namespace Delegates01
                     delProc(book);
                 }
             }
-
         }
-    }
-        
-    class BookProcessing
-    {
         public void PrintBookInfo(Book in_Book)
         {
             Console.WriteLine("ID: " + in_Book.ID);
             Console.WriteLine("Name: " + in_Book.Name);
             Console.WriteLine("Paperback: " + in_Book.Paperback);
             Console.WriteLine("Comment: " + in_Book.Comment);
-        }     
+        }    
+        public void AddComment(Book in_Book)
+        {
+            in_Book.Comment = "first comment";
+        }
     }
 
     public class Client
@@ -62,21 +61,15 @@ namespace Delegates01
             Console.WriteLine("test code ..");
             var bookDB = new BookDB();
             AddBooks(bookDB);
-            var bookProc = new BookProcessing();
-            bookDB.doSomeThingWithBookDB(AddComment);     
-            bookDB.doSomeThingWithBookDB(bookProc.PrintBookInfo);
+            bookDB.doSomeThingWithBookDB(bookDB.AddComment);     
+            bookDB.doSomeThingWithBookDB(bookDB.PrintBookInfo);
         } 
-
-        static void AddComment(Book in_Book)
-        {
-            in_Book.Comment = "first comment";
-        }
         
         static void AddBooks(BookDB in_BookDB)
         {
-            in_BookDB.AddBook(new Book {ID=1, Name="book 1", Paperback=true, Comment="Test"});
-            in_BookDB.AddBook(new Book {ID=2, Name="book 2", Paperback=true});
-            in_BookDB.AddBook(new Book {ID=3, Name="book 3", Paperback=false});
+            in_BookDB.AddBook(new Book(1, "book 1",true, "Test"));
+            in_BookDB.AddBook(new Book(2,"book 2",true,""));
+            in_BookDB.AddBook(new Book(3,"book 3",false,""));
         }
     
     }
