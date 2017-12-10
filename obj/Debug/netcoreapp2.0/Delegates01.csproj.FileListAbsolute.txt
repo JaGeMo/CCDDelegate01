@@ -1,0 +1,10 @@
+/Users/janm/Code/Lambda/Delegates01/obj/Debug/netcoreapp2.0/Delegates01.csproj.CoreCompileInputs.cache
+/Users/janm/Code/Lambda/Delegates01/obj/Debug/netcoreapp2.0/Delegates01.AssemblyInfoInputs.cache
+/Users/janm/Code/Lambda/Delegates01/obj/Debug/netcoreapp2.0/Delegates01.AssemblyInfo.cs
+/Users/janm/Code/Lambda/Delegates01/bin/Debug/netcoreapp2.0/Delegates01.deps.json
+/Users/janm/Code/Lambda/Delegates01/bin/Debug/netcoreapp2.0/Delegates01.runtimeconfig.json
+/Users/janm/Code/Lambda/Delegates01/bin/Debug/netcoreapp2.0/Delegates01.runtimeconfig.dev.json
+/Users/janm/Code/Lambda/Delegates01/bin/Debug/netcoreapp2.0/Delegates01.dll
+/Users/janm/Code/Lambda/Delegates01/bin/Debug/netcoreapp2.0/Delegates01.pdb
+/Users/janm/Code/Lambda/Delegates01/obj/Debug/netcoreapp2.0/Delegates01.dll
+/Users/janm/Code/Lambda/Delegates01/obj/Debug/netcoreapp2.0/Delegates01.pdb
